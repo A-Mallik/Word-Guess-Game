@@ -1,0 +1,54 @@
+html,body{
+  margin: 0 auto;
+  background-image: url(../images/MattSmith.png), url(../images/DavidTennant.png),url(../images/ep_naturalblack.png);
+  background-position: 10% top, 115% top;
+  background-repeat: no-repeat, no-repeat, repeat;
+  font-family: 'Bungee Inline', cursive;
+}
+
+div{
+      padding-top: 20px;
+      padding-bottom:20px;
+      height: 50px;
+}
+
+#wrapper{
+  box-shadow: 2px 2px 50px 1px white;
+  margin: 0 auto;
+  width: 580px;
+  background-color: #e9ecef;
+  height: 100vw;
+  color: #283837;
+  text-align: center;
+  background-image: url(../images/tardis.png);
+    background-repeat: no-repeat;
+}
+
+button {
+  position: relative;
+  top: 10px;
+  left: 190px;
+  text-align: center;
+  float:left;
+  background-color: white;
+  height: 50px;
+  width: 100px;
+}
+
+
+.jumbotron{
+  background-image: url(tardis.png);
+    background-repeat: no-repeat;
+  height: 200px !important;
+
+}
+
+#result{
+  height: 100px;
+}
+
+#logo{
+  position:relative;
+  top: -50px;
+  width: 400px;
+}
