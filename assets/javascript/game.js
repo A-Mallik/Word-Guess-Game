@@ -1,4 +1,7 @@
 
+// Note: As of my latest push to git, I still have to display the correct guess as a win when the full word is correctly guessed
+// Counter for guesses left have to be updated to account for multiple letters
+
 
 var x = document.getElementById("myAudio");
 var y = document.getElementById("themeAudio");
