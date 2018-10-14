@@ -23,14 +23,30 @@
 
 <body>
 
+<button onclick="themePlay()" type="button">&#9658; Theme</button>
+<button onclick="themePause()" type="button">&#10074;&#10074;</button>
+
+
+  <audio id="myAudio">
+  <source src="assets/sounds/Exterminate.mp3" type="audio/ogg">
+
+  Your browser does not support the audio element.
+</audio>
+
+<audio id="themeAudio">
+<source src="assets/sounds/DrWhoTheme.mp3" type="audio/ogg">
+
+Your browser does not support the audio element.
+</audio>
+
 
   <div id="wrapper">
 
 
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
-  <h1 class="display-4">Doctor Who</h1>
-    <!-- <img id="logo" src = "dw.png"  /> -->
+ <h1 class="display-4"> <br /><br /></h1>   <!--img was causing problems while I have limited time at this point so used br to create space for logo (background image) and set to that instead -->
+    <!-- <img id="logo" src = "assets/images/dw.png"  /> -->
     <h2 class="display-4">Guessing Game</h2>
     <p class="lead">  <h5> Press Any Key To Start The Game</h5>
     <span style="font-weight: bold">(WARNING: will also be your first guess.)</span>
@@ -44,6 +60,7 @@
 
             </div>
             <br />
+              <br />
             Correct Guesses:
             <div id="correctGuessContainer">
 

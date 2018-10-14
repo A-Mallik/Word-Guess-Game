@@ -1,7 +1,31 @@
 
 
+var x = document.getElementById("myAudio");
+var y = document.getElementById("themeAudio");
+
+function playAudio() {
+    x.play();
+}
+
+function pauseAudio() {
+    x.pause();
+}
+
+function themePlay() {
+    y.play();
+}
+
+function themePause() {
+    y.pause();
+}
+
 function resetBtn(){
-     location.reload();
+
+     setTimeout(function() {
+      location.reload();   // sets a timeout and reload time to play audio before resetting page for next word when reset button is pressed.
+    }, 2000);
+     playAudio();
+
 }
 
 function playVid(){
@@ -11,6 +35,7 @@ function playVid(){
     } else {
         x.style.visibility = "hidden";
     }
+    x.play();
 }
 
 
@@ -101,7 +126,7 @@ function testKey(wordEntered){
 
         }
 
-    document.getElementById("guessAmount").innerHTML = wordCounter-1;
+    document.getElementById("guessAmount").innerHTML = wordCounter;
 
     document.getElementById("underScoreContainer").innerHTML =  underScore.join(" ");  // container that holds the underScores displayed on screen and .join removes the commas
 
@@ -133,7 +158,7 @@ function testKey(wordEntered){
                 }
 
                 if(userKeys.length != ProperWritten.length){
-
+         // This part of code below is a work in progress so not completely working (yet)
                     if(userGuess === "Enter" && userKeys.length == wordCounter ){ // if max guesses are reached and user presses enter key, alerts that its completed and displays full answer
 
                        setTimeout(function() {
@@ -201,23 +226,22 @@ function testKey(wordEntered){
         var test = confirm("Are you ready to see the answer?");
 
         if(test == true){
-            document.getElementById("result").innerHTML = "<h4>The answer is <br /></h4> <h2>" + ProperlyShown + "</h2>";
 
-            if(userKeys == wordEntered){
+            document.getElementById("result").innerHTML = "<h4>The answer is <br /></h4> <h2>" + ProperlyShown + "</h2>  <br />";
+
+            if(underScore.length == wordEntered.length && underScore == correctGuess){
                 alert("You Win");
 
             }
              setTimeout(function() {
-            location.reload(); }, 3000);  // page will reload after 3 seconds if user does not press reset
+            location.reload(); }, 4000);  // page will reload after 3 seconds if user does not press reset
 
             }
 
-            if(userKeys == wordEntered.toLowerCase()){ // not working, attempting to detect full word written correctly then alert that they won if it did
-                alert("You Win");
 
-            }
          // sets a timeout and reload time
        }, 05);  // used this to compensate for page prompting as soon as last letter is pressed otherwise last letter isnt displayed as desired.
+
 
       }
 
@@ -225,5 +249,5 @@ function testKey(wordEntered){
 
 
 
-    return;
+    console.log(correctGuess);
 }
